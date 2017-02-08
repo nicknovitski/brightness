@@ -2,7 +2,7 @@
 # Makefile to build brightness
 # originally by Jon Stacey <jon@jonsview.com>
 
-prefix=/usr/local
+PREFIX?=/usr/local
 
 override CFLAGS += -mmacosx-version-min=10.6
 
@@ -23,5 +23,5 @@ clean:
 	/bin/rm -f brightness *.o
 
 install:
-	/bin/mkdir -p $(prefix)/bin
-	/usr/bin/install -s -m 0755 brightness $(prefix)/bin
+	/bin/mkdir -p $(PREFIX)/bin
+	/usr/bin/install -s -m 0755 brightness $(PREFIX)/bin
